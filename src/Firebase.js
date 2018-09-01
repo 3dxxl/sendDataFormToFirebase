@@ -12,14 +12,12 @@ import * as firebase from 'firebase';
   firebase.initializeApp(config);
 
 
-//const muss ich zur funktion setzen, sonst gehts nicht, hier wird die firebase.auth() Funktion ausgeführt
-//dieserFunktion werden die Parapemter email &Passwort übergeben.
-//
+
  export function sendDataFunktionPut (essen, adresse) {
  
     fetch('https://liste-3df9a.firebaseio.com/liste.json', {
 
-        method: 'PUT',
+        method: 'POST',
         headers:{
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -34,7 +32,9 @@ import * as firebase from 'firebase';
 
     .then(response => response.json())
     .then(json => console.log(json))
-
+    
+    console.log("geht")
     
     
 }
+

@@ -32,10 +32,12 @@ handleChangeEssen = (event) => {
   this.setState({ essen: event.target.value });
 }
 
-zweiFunktionen = () => {
+//e.preventDefault(); Es wird verhindert, dass die Seite neu geladen wird. 
+zweiFunktionen = (e) => {
+  e.preventDefault();
   sendDataFunktionPut(this.state.essen, this.state.adresse)
   console.log("wurd ausgeführt")
-}
+  }
 
   render() {
 
@@ -74,6 +76,7 @@ zweiFunktionen = () => {
   </div>
   <button className="ui button" type="submit" onClick={this.zweiFunktionen}>Submit</button>
 </form>
+
 
       </div>
     )
