@@ -13,11 +13,11 @@ import * as firebase from 'firebase';
 
 
 
- export function sendDataFunktionPut (essen, adresse) {
+ export function sendDataFunktionPut (essen, adresse, valueWasser, valueNachtisch) {
  
     fetch('https://liste-3df9a.firebaseio.com/liste.json', {
 
-        method: 'POST',
+        method: 'PUT',
         headers:{
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -26,6 +26,9 @@ import * as firebase from 'firebase';
         body: JSON.stringify({
             essen: essen, 
             adresse: adresse,
+            valueWasser: valueWasser,
+            valueNachtisch: valueNachtisch
+
           }),
 
     })

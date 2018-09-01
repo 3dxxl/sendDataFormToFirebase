@@ -19,8 +19,18 @@ export class Form extends Component {
    this.state = {
         essen: '',
         adresse:'',
+        valueWasser:'select',
+        valueNachtisch:'select'
 
     } 
+  }
+
+  changeWasser = (event) => {
+    this.setState({valueWasser: event.target.value})
+  }
+
+  changeNachtisch = (event) => {
+    this.setState({valueNachtisch: event.target.value})
   }
 
 
@@ -35,7 +45,7 @@ handleChangeEssen = (event) => {
 //e.preventDefault(); Es wird verhindert, dass die Seite neu geladen wird. 
 zweiFunktionen = (e) => {
   e.preventDefault();
-  sendDataFunktionPut(this.state.essen, this.state.adresse)
+  sendDataFunktionPut(this.state.essen, this.state.adresse, this.state.valueWasser, this.state.valueNachtisch)
   console.log("wurd ausgeführt")
   }
 
@@ -48,7 +58,7 @@ zweiFunktionen = (e) => {
       <form className="ui form">
       <div className="field">
       <label>Getränke</label>
-      <select className="ui fluid dropdown">
+      <select className="ui fluid dropdown" onChange={this.changeWasser} value={this.state.value}>
         <option value="Wasser">Wasser</option>
         <option value="Cola">Cola</option>
         <option value="Fante">Fanta</option>
@@ -56,7 +66,7 @@ zweiFunktionen = (e) => {
     </div>
     <div>
     <label>Nachtisch</label>
-      <select className="ui fluid dropdown">
+      <select className="ui fluid dropdown" onChange={this.changeNachtisch} value={this.state.value}>
         <option value="Schokolade">Schokolade</option>
         <option value="Eis">Eis</option>
         <option value="Kuchen">Kuchen</option>
