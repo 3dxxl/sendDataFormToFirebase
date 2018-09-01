@@ -1,0 +1,19 @@
+{
+    "liste": [
+      {
+        "Getraenke": "Wasser",
+        "Menge": 1
+        
+      },
+      {
+        "Essen": "Fisch",
+        "Menge": 1
+        
+      },
+      {
+        "Adresse": "Wasser"
+      }
+    ]
+  }
+
+
