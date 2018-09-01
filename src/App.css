@@ -37,3 +37,10 @@
 .getränkeStyle {
   width: fit-content;
 }
+
+.radioButtons {
+  display: block;
+  padding: 1%;
+  
+}
+

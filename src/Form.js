@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-//Semanitv UI
-// das muss man in der index.js Datei noch einfügen: import 'semantic-ui-css/semantic.min.css'
-import {form, button} from 'semantic-ui-react';
+import Checkbox from './Checkbox';
 
 //firebase Funktion
 import {sendDataFunktionPut} from './Firebase';
@@ -72,6 +70,10 @@ zweiFunktionen = (e) => {
         <option value="Kuchen">Kuchen</option>
       </select>
     </div>
+
+      <Checkbox/>
+     
+
   <div className="field">
     <label>Essen</label>
     <input type="Essen" name="essen" style={{width:"100%", height:50}}
@@ -86,6 +88,8 @@ zweiFunktionen = (e) => {
   </div>
   <button className="ui button" type="submit" onClick={this.zweiFunktionen}>Submit</button>
 </form>
+
+  
 
 
       </div>
